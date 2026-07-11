@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Royal Time — Swiss Watches In Stock</title>
+  <meta name="description" content="Royal Time — a watch atelier in Moscow. Authentic Swiss watches: Rolex, Patek Philippe, Audemars Piguet and more. Guaranteed authenticity, expert certification, delivery across Russia." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Manrope:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__brand" aria-label="Royal Time — home">
+      <span class="nav__mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="34" height="34">
+          <circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="20" cy="20" r="12.5" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/>
+          <line x1="20" y1="20" x2="20" y2="9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="20" y1="20" x2="27" y2="23" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <circle cx="20" cy="20" r="1.6" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="nav__word">Royal<em>Time</em></span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#collection">Collection</a>
+      <a href="#brands">Brands</a>
+      <a href="#house">About</a>
+      <a href="#contacts">Contacts</a>
+    </nav>
+
+    <div class="nav__aside">
+      <span class="nav__clock" id="clock" title="Moscow, current time">--:--:--</span>
+      <a href="tel:+74959997777" class="nav__phone">+7 (495) 999-77-77</a>
+      <a href="#request" class="btn btn--sm">Enquire</a>
+    </div>
+  </header>
+
+  <!-- ============ HERO (scroll-scrub) ============ -->
+  <section class="hero" id="top" aria-label="Watch movement disassembly">
+    <div class="hero__sticky">
+      <div class="hero__stage">
+        <video class="hero__video" id="heroVideo"
+               src="0710_scrub.mp4"
+               muted playsinline preload="auto"
+               disablepictureinpicture></video>
+        <div class="hero__vignette" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero__overlay">
+        <div class="hero__lead">
+          <p class="hero__eyebrow">Watch Atelier · Moscow · Est. 2013</p>
+          <h1 class="hero__title">
+            Every detail<br /><span>holds its value</span>
+          </h1>
+        </div>
+        <p class="hero__lede">
+          Authentic Swiss watches — assembled, inspected and certified
+          by our experts. Scroll to take the movement apart.
+        </p>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span>Scroll to disassemble</span>
+        <i></i>
+      </div>
+
+      <div class="hero__cta" id="heroCta" aria-hidden="true">
+        <a href="#collection" class="btn btn--lg">View the collection</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MANIFEST STRIP ============ -->
+  <section class="manifest section" id="house">
+    <div class="ring" aria-hidden="true">
+      <svg viewBox="0 0 120 120" width="120" height="120">
+        <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="0.6"/>
+        <circle cx="60" cy="60" r="44" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.6"/>
+        <circle cx="60" cy="60" r="30" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.35"/>
+        <line x1="60" y1="4" x2="60" y2="18" stroke="currentColor" stroke-width="1"/>
+        <line x1="60" y1="102" x2="60" y2="116" stroke="currentColor" stroke-width="1"/>
+        <line x1="4" y1="60" x2="18" y2="60" stroke="currentColor" stroke-width="1"/>
+        <line x1="102" y1="60" x2="116" y2="60" stroke="currentColor" stroke-width="1"/>
+      </svg>
+    </div>
+    <h2 class="manifest__text reveal">
+      For twelve years we have gathered watches worth trusting.
+      <span>Every piece passes an authenticity review —
+      from the case to the very last screw.</span>
+    </h2>
+    <div class="manifest__stats">
+      <div class="stat reveal">
+        <span class="stat__num" data-count="12">0</span>
+        <span class="stat__label">years on the market</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat__num" data-count="37800" data-suffix="+">0</span>
+        <span class="stat__label">completed deals</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat__num" data-count="66">0</span>
+        <span class="stat__label">Swiss maisons</span>
+      </div>
+      <div class="stat reveal">
+        <span class="stat__num" data-count="100" data-suffix="%">0</span>
+        <span class="stat__label">verified authenticity</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COLLECTION ============ -->
+  <section class="collection section" id="collection">
+    <div class="section__head">
+      <p class="eyebrow">Available now</p>
+      <h2 class="section__title">The Collection</h2>
+      <p class="section__sub">
+        Selected pieces in impeccable condition — full set, warranty
+        and expert certification. Prices are indicative; confirm current
+        pricing with a consultant.
+      </p>
+    </div>
+
+    <div class="filters" id="filters" role="tablist" aria-label="Filter by brand"></div>
+
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- ============ BRAND MARQUEE ============ -->
+  <section class="brands" id="brands" aria-label="Brands">
+    <div class="marquee">
+      <div class="marquee__track" id="marqueeTrack"></div>
+    </div>
+  </section>
+
+  <!-- ============ HOUSE / WHY ============ -->
+  <section class="why section">
+    <div class="section__head">
+      <p class="eyebrow">Why Royal Time</p>
+      <h2 class="section__title">Confidence in every deal</h2>
+    </div>
+    <div class="why__grid">
+      <article class="pillar reveal">
+        <span class="pillar__idx">Authenticity</span>
+        <h3>Expertise on every piece</h3>
+        <p>We verify the movement, serial numbers and completeness, then issue a certificate — you pay only for the genuine article.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="pillar__idx">Warranty</span>
+        <h3>Service and maintenance</h3>
+        <p>An official house warranty and workshop access keep your watch running for years to come.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="pillar__idx">Trade-in</span>
+        <h3>Exchange and buy-back</h3>
+        <p>Trade your watch toward a new model with a surcharge, or sell it to us at a fair valuation — up to 95% of value.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="pillar__idx">Delivery</span>
+        <h3>Across Russia</h3>
+        <p>Insured delivery to 14+ cities. Try on and inspect before purchase at our Sayanskaya showroom.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ REQUEST FORM ============ -->
+  <section class="request section" id="request">
+    <div class="request__inner">
+      <div class="request__copy">
+        <p class="eyebrow">Personal selection</p>
+        <h2 class="section__title">Request<br />a consultation</h2>
+        <p class="section__sub">
+          Tell us which model you have in mind. A consultant will reach out
+          within one business day, suggest options and arrange a viewing.
+        </p>
+        <ul class="request__contacts">
+          <li><a href="tel:+74959997777">+7 (495) 999-77-77</a></li>
+          <li><a href="tel:+79364440444">+7 (936) 444-04-44</a></li>
+          <li><a href="mailto:royal-time@gmail.com">royal-time@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <form class="request__form" id="requestForm" novalidate>
+        <div class="field">
+          <label for="fName">Name</label>
+          <input id="fName" name="name" type="text" autocomplete="name" placeholder="How should we address you" required />
+        </div>
+        <div class="field">
+          <label for="fPhone">Phone</label>
+          <input id="fPhone" name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required />
+        </div>
+        <div class="field">
+          <label for="fModel">Model of interest</label>
+          <input id="fModel" name="model" type="text" placeholder="e.g. Rolex Submariner" list="modelHints" />
+          <datalist id="modelHints"></datalist>
+        </div>
+        <button type="submit" class="btn btn--lg btn--block">Send request</button>
+        <p class="request__note" id="formNote" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTS ============ -->
+  <section class="contacts section" id="contacts">
+    <div class="contacts__grid">
+      <div class="contacts__card">
+        <p class="eyebrow">Showroom</p>
+        <h3>Moscow, Sayanskaya Street 19</h3>
+        <dl class="contacts__list">
+          <div><dt>Phone</dt><dd><a href="tel:+74959997777">+7 (495) 999-77-77</a></dd></div>
+          <div><dt>Also</dt><dd><a href="tel:+79364440444">+7 (936) 444-04-44</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:royal-time@gmail.com">royal-time@gmail.com</a></dd></div>
+          <div><dt>Hours</dt><dd>Daily, 10:00 — 21:00</dd></div>
+        </dl>
+        <div class="contacts__msg">
+          <a href="https://wa.me/79364440444" class="chip">WhatsApp</a>
+          <a href="https://t.me/royaltime" class="chip">Telegram</a>
+          <a href="https://www.tiktok.com/@royal_time.ru" class="chip">TikTok</a>
+          <a href="#" class="chip">VK</a>
+        </div>
+      </div>
+      <div class="contacts__map">
+        <iframe
+          title="Map — Sayanskaya Street 19"
+          src="https://yandex.ru/map-widget/v1/?ll=37.795%2C55.751&z=16&text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%A1%D0%B0%D1%8F%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%2019"
+          loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot">
+    <div class="foot__row">
+      <span class="foot__brand">Royal<em>Time</em></span>
+      <span class="foot__tag">Convenient · reliable · optimal</span>
+    </div>
+    <div class="foot__row foot__row--fine">
+      <span>© 2013—2026 Royal Time Watch Center</span>
+      <span>Watches and prices on this site are not a public offer</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
