@@ -297,6 +297,38 @@ img, svg, video, iframe { display: block; max-width: 100%; }
   pointer-events: auto;
 }
 
+/* ---------- mobile: tap-to-play instead of scroll-scrub ---------- */
+.hero__play { display: none; }
+.hero.is-tap { height: 100svh; }
+.hero.is-tap .hero__sticky { position: relative; height: 100svh; }
+.hero.is-tap .hero__scroll { display: none; }
+.hero.is-tap .hero__play {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  bottom: clamp(26px, 6vh, 54px);
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  padding: 13px 22px 13px 18px;
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--gold);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.8);
+  transition: opacity .5s var(--ease), transform .5s var(--ease), background .3s var(--ease);
+}
+.hero.is-tap .hero__play:active { background: var(--gold-bright); }
+.hero.is-tap .hero__overlay { transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.hero.is-tap.overlay-hidden .hero__overlay { opacity: 0; transform: translateY(-30px); pointer-events: none; }
+.hero.is-tap.is-playing .hero__play { opacity: 0; pointer-events: none; }
+
 /* =========================================================
    MANIFEST
    ========================================================= */

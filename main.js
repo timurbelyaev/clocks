@@ -61,12 +61,38 @@ function observeReveals(scope = document) {
   const overlay = $('.hero__overlay');
   const scrollHint = $('.hero__scroll');
   const cta = $('#heroCta');
+  const playBtn = $('#heroPlay');
   if (!hero || !video) return;
 
   // Reduced motion: no scrub, just gentle looping ambience.
   if (reduceMotion) {
     video.setAttribute('loop', '');
     video.play().catch(() => {});
+    return;
+  }
+
+  // Touch devices: finger-scroll scrubbing is janky and seeking is slow on
+  // mobile decoders, so play the disassembly forward once on tap instead.
+  const isTouch = window.matchMedia('(max-width: 760px)').matches
+    || window.matchMedia('(pointer: coarse)').matches;
+  if (isTouch) {
+    hero.classList.add('is-tap');
+    const label = playBtn && playBtn.querySelector('.hero__play-label');
+
+    const play = () => {
+      hero.classList.add('overlay-hidden', 'is-playing');
+      cta.classList.remove('is-on');
+      try { video.currentTime = 0; } catch (_) {}
+      video.play().catch(() => {});
+    };
+
+    video.addEventListener('ended', () => {
+      hero.classList.remove('is-playing');   // button reappears as "Replay"
+      cta.classList.add('is-on');
+      if (label) label.textContent = 'Replay';
+    });
+
+    if (playBtn) playBtn.addEventListener('click', play);
     return;
   }
 
